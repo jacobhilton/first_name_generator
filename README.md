@@ -1,6 +1,8 @@
 # first_name_generator
 
-Octave implementation of a first name generator using principal component analysis of a database of first names (some of which seem to be misspelled) derived from US census data:
+Octave implementation of a first name generator using principal component analysis of a dataset of first names (some of which seem to be misspelled) derived from US census data.
+
+The dataset contains 86987 first names:
 
 139 names of length 2  
 898 names of length 3  
@@ -17,7 +19,7 @@ Octave implementation of a first name generator using principal component analys
 50 names of length 14  
 31 names of length 15 
 
-The generator takes a "creativity" parameter. When set close to zero, it will with high probability give a word corresponding to the principal component of the names of a certain length:
+The generator takes a "creativity" parameter. When set close to zero, with high probability the generated name corresponds to the first principal component of the names of that length:
 
 Ra  
 May  
@@ -34,7 +36,7 @@ Joseinmichael
 Macaaelizabeth  
 Christopherjaan  
 
-At the other end of the spectrum, with very high creativity, the generated names of a given length are distributed close to uniformly at random:
+At the other extreme, when the creativity parameter is very large, the generated names of a given length are distributed close to uniformly at random:
 
 Yb  
 Whm  
@@ -51,7 +53,7 @@ Fcdxmpirnaokr
 Mrpywytzyhlyyp  
 Aplsiavmlqowgxo  
 
-Here are some examples generated using a creativity of 2:
+Using a creativity of 2 seems to work as a reasonable compromise:
 
 Titiso  
 Lisreqrt  
@@ -74,4 +76,4 @@ Lesrnret
 Erai  
 Jisierct  
 
-The data is taken from [this](https://www.drupal.org/project/namedb) Drupal project, which is licensed under the GNU General Public License, Version 2.
+The dataset is taken from [this](https://www.drupal.org/project/namedb) Drupal project, which is licensed under the GNU General Public License, Version 2.
