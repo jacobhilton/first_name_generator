@@ -19,61 +19,60 @@ The dataset contains 86987 first names:
 50 names of length 14  
 31 names of length 15 
 
-The generator takes a "creativity" parameter. When set close to zero, with high probability the generated name corresponds to the first principal component of the names of that length:
+The generator takes a "creativity" parameter. When set close to zero, the generated name corresponds to a point close to the line passing through the mean and the first principal component of the names of that length. It will therefore typically be one of the following, depending on which side of the mean is chosen:
 
-Ra  
-May  
-Jaan  
-Jaran  
-Jarlen  
-Lanesia  
-Lareisha  
-Marhalinn  
-Martarious  
-Christopher  
-Christiopher  
-Joseinmichael  
-Macaaelizabeth  
-Christopherjaan  
+Si or Oc  
+Dan or Ara  
+Mana or Aran  
+Jaren or Ahana  
+Jarlen or Alanna  
+Lanenia or Shaneen  
+Mamarian or Shaneene  
+Marharius or Shantenla  
+Mantarious or Alessandea  
+Christopher or Quantarious  
+Christiopher or Jisheelmarie  
+Josephmichael or Marialiamarie  
+Macaaelizabeth or Chtwstimijaael  
+Christopherjaan or Joanchrlstapher  
 
-At the other extreme, when the creativity parameter is very large, the generated names of a given length are distributed close to uniformly at random:
+At the other extreme, when the creativity parameter is very large, the generated names of a given length are distributed much more uniformly, as in these examples:
 
-Yb  
-Whm  
-Esav  
-Cpqai  
-Rytkho  
-Yzlmcxv  
-Pimrwrcf  
-Dbobxeuas  
-Xzbhxaycnr  
-Qmqvyqphwwr  
-Wrmowmqxbtqw  
-Fcdxmpirnaokr  
-Mrpywytzyhlyyp  
-Aplsiavmlqowgxo  
+Rx  
+Crq  
+Dhjy  
+Keloa  
+Saeiee  
+Kayarin  
+Chieetlq  
+Jxaiaixxj  
+Jqanaxaiux  
+Yxqiszxiobf  
+Cwwjxqidwxzc  
+Hbffqzxslxzfp  
+Cfzivxgzvaqzqc  
+Vbiqivtepnblurf  
 
-Using a creativity of 2 seems to work as a reasonable compromise:
+Here are some names generated using a creativity of 1.5:
 
-Titiso  
-Lisreqrt  
-Asbe  
-Dersi  
-Mrrhnehano  
-Zerli  
-Ekae  
-Dtrse  
-Mirse  
-Mersi  
-Jefrdrla  
-Totuyo  
-Rytiho  
-Etbi  
-Dojbydias  
-Dikbyeuah  
-Filhant  
-Lesrnret  
-Erai  
-Jisierct  
+Juanaajhris  
+Anilrane  
+Eurs  
+Camsila  
+Chrettntaone  
+Denaaa  
+Aerei  
+Hyril  
+Galnaandrn  
+Cari  
+Joara  
+Cisiie  
+Talar  
+Crrloe  
+Mayoe  
+Kaealina  
+Taniotnn  
+Alaralia  
+Arrree  
 
 The dataset is taken from [this](https://www.drupal.org/project/namedb) Drupal project, which is licensed under the GNU General Public License, Version 2.
