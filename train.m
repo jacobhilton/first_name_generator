@@ -7,6 +7,8 @@ function train()
     exampleLengths(i, 1) = length(examples{i, 1});
   end
   ms = [];
+  mus = {};
+  sigmas = {};
   Us = {};
   Ss = {};
   for l = 1:max(exampleLengths, [], 1)
@@ -20,11 +22,15 @@ function train()
 	end
       end
       mu = mean(X, 1);
-      X_norm = X - repmat(mu, m, 1);
+      sigma = std(X, 1);
+      sigma = sigma + (sigma == 0);
+      X_norm = (X - repmat(mu, m, 1)) ./ repmat(sigma, m, 1);
       [U, S, ~] = svd((X_norm' * X_norm) / m);
       ms(l, 1) = m;
+      mus{l, 1} = mu;
+      sigmas{l, 1} = sigma;
       Us{l, 1} = U;
       Ss{l, 1} = S;
     end
   end
-  save("data.mat", "alphabet", "ms", "Us", "Ss");
+  save("data.mat", "alphabet", "ms", "mus", "sigmas", "Us", "Ss");
