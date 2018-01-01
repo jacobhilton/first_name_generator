@@ -62,6 +62,8 @@ Yxqiszxiobf
 Cwwjxqidwxzc  
 Hbffqzxslxzfp  
 Cfzivxgzvaqzqc  
-Vbiqivtepnblurf  
+Vbiqivtepnblurf
+
+When the creativity parameter is exactly 1, the generated name is effectively being sampled from a multivariate normal distribution that has been fit to the training data.
 
 The dataset contains 86987 first names and is taken from [this](https://www.drupal.org/project/namedb) Drupal project, which is licensed under the GNU General Public License, Version 2.
